@@ -34,7 +34,6 @@ export interface DialogData {
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
-    MatDialogClose,
   ],
   templateUrl: './custom-dialog.component.html',
   styleUrl: './custom-dialog.component.scss',

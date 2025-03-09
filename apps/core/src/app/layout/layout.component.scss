@@ -93,6 +93,14 @@
     padding: 0px 35px;
   }
 
+  .app-drawer-content {
+    display: flex;
+    width: -webkit-fill-available;
+    height: calc(100vh - 160px);
+    background: #fff;
+    margin: 8px
+  }
+
   .app-drawer-divider {
     margin: 0px 40px;
     border-color: #def1ff;

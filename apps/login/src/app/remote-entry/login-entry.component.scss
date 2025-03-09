@@ -1,0 +1,96 @@
+.app-background {
+  height: calc(100vh);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/backgroud.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  .app-card {
+    height: 449px;
+    width: 640px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #000;
+
+    .app-card-title {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        font-size: 36px;
+        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+        color: #33658a;
+    }
+
+    .app-card__input-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 84px 32px 5px 32px;
+
+      .app-card__input {
+        width: 80%;
+        margin: 10px;
+      }
+
+      .app-card__button {
+        width: 80%;
+        margin: 10px;
+      }
+    }
+
+    .app-card__actions-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+
+      .secundary-button {
+        border: 3px solid #fff;
+        background-color:  #2E3E4A;
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      
+      .primary-button {
+        border: 3px solid #fff;
+        background-color: var(--mat-sys-primary);
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+    }
+
+    .app-card__forgot-password {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      .app-card__forgot-password-link {
+        color: #008CBF;
+        font-size: 20px;
+        line-height: 14px;
+        letter-spacing: 0.25px;
+        text-decoration: underline;
+      }
+      .app-card__forgot-password-link:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

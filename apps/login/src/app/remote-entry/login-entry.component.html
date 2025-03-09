@@ -1,0 +1,39 @@
+<div class="app-background">
+  <mat-card class="app-card">
+    <mat-card-title class="app-card-title"> Iniciar Sesión </mat-card-title>
+
+    <mat-card-content>
+      <div class="app-card__input-content">
+        <mat-form-field class="dialog-content-input">
+          <mat-label>Correo</mat-label>
+          <input matInput [(ngModel)]="email" />
+        </mat-form-field>
+        <mat-form-field class="dialog-content-input">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="password" />
+        </mat-form-field>
+      </div>
+      <div class="app-card__actions-content">
+        <button
+          mat-raised-button
+          class="secundary-button"
+          routerLink="/register"
+        >
+          Registrar
+        </button>
+        <button
+          mat-raised-button
+          class="primary-button"
+          routerLink="/dashboard/dailys"
+        >
+          Ingresar
+        </button>
+      </div>
+      <div class="app-card__forgot-password">
+        <a class="app-card__forgot-password-link" routerLink="forgot-password">
+            Olvidó Contraseña
+        </a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
