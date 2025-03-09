@@ -1,0 +1,15 @@
+<div class="app-background">
+  <div class="app-background__card-content">
+    @for (member of members; track member) {
+    <mat-card class="app-card">
+      <mat-card-title class="app-card-title">{{ member.name }}</mat-card-title>
+      <mat-card-subtitle class="app-card-subtitle"
+        >Estado de Animo: {{ member.mail }}</mat-card-subtitle
+      >
+    </mat-card>
+    }
+  </div>
+  <div class="app-card__content-action">
+    <button mat-raised-button class="primary-button" (click)="openDialog()">Agregar Miembro</button>
+  </div>
+</div>
