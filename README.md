@@ -1,96 +1,103 @@
 # DailyAlarms
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+<a alt="Nx logo" target="_blank" rel="noreferrer"><img src="apps/core/public/assets/daily.png"></a>
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+ Este proyecto es una aplicación Angular que incluye varios módulos como core, dashboard, login, settings y users.
 
-## Run tasks
+## Estructura del Proyecto
 
-To run tasks with Nx use:
+La estructura del proyecto es la siguiente:
 
-```sh
-npx nx <target> <project-name>
+```
+.editorconfig
+.gitignore
+.npmrc
+.prettierignore
+.prettierrc
+eslint.config.mjs
+nx.json
+package.json
+pnpm-lock.yaml
+README.md
+tsconfig.base.json
+.angular/
+.cache/
+.nx/
+.vscode/
+apps/
+  core/
+  dashboard/
+  login/
+  settings/
+  users/
 ```
 
-For example:
+### Descripción de Carpetas
+
+- **.angular/**: Configuración específica de Angular.
+- **.cache/**: Archivos de caché.
+- **.nx/**: Configuración y caché de Nx.
+- **.vscode/**: Configuración específica de Visual Studio Code.
+- **apps/**: Contiene los diferentes módulos de la aplicación:
+  - **core/**: Módulo principal de la aplicación.
+  - **dashboard/**: Módulo del panel de control.
+  - **login/**: Módulo de autenticación.
+  - **settings/**: Módulo de configuración.
+  - **users/**: Módulo de gestión de usuarios.
+
+## Instalación
+
+Para instalar las dependencias del proyecto, ejecuta el siguiente comando:
 
 ```sh
-npx nx build myproject
+pnpm install
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+## Ejecución del Proyecto
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
-```sh
-npx nx add @nx/react
-```
-
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
+Para ejecutar el proyecto en modo desarrollo, utiliza el siguiente comando:
 
 ```sh
-# Generate an app
-npx nx g @nx/react:app demo
-
-# Generate a library
-npx nx g @nx/react:lib some-lib
+pnpm serve
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+Esto iniciará un servidor de desarrollo y podrás visualizar la aplicación en tu navegador en `http://localhost:4200`.
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Construcción del Proyecto
 
-## Set up CI!
-
-### Step 1
-
-To connect to Nx Cloud, run the following command:
+Para construir el proyecto para producción, utiliza el siguiente comando:
 
 ```sh
-npx nx connect
+pnpm build
 ```
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+Los archivos construidos se encontrarán en la carpeta `dist/`.
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+ ## Vistas Configuradas
 
-### Step 2
 
-Use the following command to configure a CI workflow for your workspace:
+ - Login
+    Ruta: http://localhost:4200/login
 
-```sh
-npx nx g ci-workflow
-```
+    <a alt="Login" target="_blank" rel="noreferrer"><img src="apps/core/public/assets/login.png"></a>
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- Dashboard (Registros Equipos)
+    Ruta: http://localhost:4200/dashboard/daily
 
-## Install Nx Console
+<a alt="Login" target="_blank" rel="noreferrer"><img src="apps/core/public/assets/registers.png"></a>
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+- Dashboard (Miembros)
+    Ruta: http://localhost:4200/dashboard/users
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+    <a alt="Login" target="_blank" rel="noreferrer"><img src="apps/core/public/assets/members.png"></a>
 
-## Useful links
 
-Learn more:
+- Dashboard (Ajustes)
+    Ruta: http://localhost:4200/dashboard/settings
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+<a alt="Login" target="_blank" rel="noreferrer"><img src="apps/core/public/assets/settings.png"></a>
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+ ## Autor
+
+- [Nicolás Potier](https://github.com/nipoanz)
