@@ -1,0 +1,23 @@
+<div class="app-background">
+  @for (daily of dailysRegister; track daily) {
+  <mat-card class="app-card">
+    <mat-card-title class="app-card-title">{{daily.name}}</mat-card-title>
+    <mat-card-subtitle class="app-card-subtitle">Estado de Animo: {{daily.emotions}}</mat-card-subtitle>
+    <mat-card-content>
+      <div class="app-card__content-row">
+        <p class="app-card__content-row-title">¿Qué hizo ayer?</p>
+        <p class="app-card__content-row-content">{{daily.yesterday}}</p>
+      </div>
+      <div class="app-card__content-row">
+        <p class="app-card__content-row-title">¿Qué va hacer hoy?</p>
+        <p class="app-card__content-row-content">{{daily.today}}</p>
+      </div>
+      
+      <div class="app-card__content-row">
+        <p class="app-card__content-row-title">¿Qué bloqueantes tiene?</p>
+        <p class="app-card__content-row-content">{{daily.blockers}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  }
+</div>

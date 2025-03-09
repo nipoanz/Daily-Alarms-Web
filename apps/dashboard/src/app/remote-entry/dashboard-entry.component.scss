@@ -1,0 +1,120 @@
+.app-background {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0px 32px 0px 32px;
+  
+  .app-card {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+    .app-card-title {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      font-size: 24px;
+      padding: 0px 16px 0px 16px;
+      line-height: 31px;
+      letter-spacing: 0.25px;
+      font-weight: 500;
+      justify-content: start;
+      align-items: center;
+      color: #33658a;
+    }
+
+    .app-card-subtitle {
+      font-size: 18px;
+      padding: 0px 16px 0px 16px;
+      line-height: 31px;
+      letter-spacing: 0.15px;
+      font-weight: 400;
+      justify-content: start;
+      align-items: center;
+      color: #008CBF;
+    }
+
+    .app-card__content-row-title {
+      font-size: 20px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      line-height: 25px;
+      letter-spacing: 0px;
+      font-weight: 400;
+      justify-content: start;
+      align-items: center;
+      color: #33658a;
+    }
+
+    .app-card__content-row-content {
+      margin-top: 0px;
+      padding-top: 0px;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      color: #2e3e4a;
+    }
+
+    .app-card__input-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 84px 32px 5px 32px;
+
+      .app-card__input {
+        width: 80%;
+        margin: 10px;
+      }
+
+      .app-card__button {
+        width: 80%;
+        margin: 10px;
+      }
+    }
+
+    .app-card__actions-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+
+      .secundary-button {
+        border: 3px solid #fff;
+        background-color: #2e3e4a;
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .primary-button {
+        border: 3px solid #fff;
+        background-color: var(--mat-sys-primary);
+        text-transform: uppercase;
+        color: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .app-card__forgot-password {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      .app-card__forgot-password-link {
+        color: #008cbf;
+        font-size: 20px;
+        line-height: 14px;
+        letter-spacing: 0.25px;
+        text-decoration: underline;
+      }
+      .app-card__forgot-password-link:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .app-card:last-child {
+    margin-bottom: 30px;
+  }
+}

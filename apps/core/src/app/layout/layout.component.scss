@@ -9,10 +9,26 @@
     display: flex;
     align-items: center;
   }
+}
 
-  .app-toolbar__spacer {
-    flex: 1 1 auto;
+.app-toolbar__spacer {
+  flex: 1 1 auto;
+}
+
+.app-toolbar__calendar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  > * {
+    color: #33658a;
   }
+}
+
+.app-toolbar__breadbcrumbs {
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .app-drawer {
@@ -93,16 +109,15 @@
     padding: 0px 35px;
   }
 
-  .app-drawer-content {
-    display: flex;
-    width: -webkit-fill-available;
-    height: calc(100vh - 160px);
-    background: #fff;
-    margin: 8px
-  }
+  // .app-drawer-content-container {
+  //   padding: 0px 32px 0px 32px;
+  //   background: red;
+  // }
+
+ 
 
   .app-drawer-divider {
-    margin: 0px 40px;
+    margin: 0px 40px 20px 40px;
     border-color: #def1ff;
   }
 }
@@ -127,9 +142,10 @@
 
 .primary-button {
   border: 3px solid #fff;
-  background-color: var(--mat-sys-primary);
+  background-color: #DEF1FF;
   text-transform: uppercase;
-  color: #fff;
+  color: #000;
+  font-weight: 700;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 

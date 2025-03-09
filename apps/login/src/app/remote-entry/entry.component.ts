@@ -24,6 +24,4 @@ import { RouterModule } from '@angular/router';
 export class RemoteEntryComponent {
   readonly email = signal('john.doe@yopmail.com');
   readonly password = signal('***********');
-
-
 }

@@ -41,13 +41,15 @@
 
     </div>
   </mat-drawer>
-  <mat-drawer-content>
+  <mat-drawer-content class="app-drawer-content-container">
     <div class="app-drawer-content-bar">
-      <span>{{ teamSelected.name }} / {{ viewSelected }}</span>
+      <span class="app-toolbar__breadbcrumbs">{{ teamSelected.name }} / {{ viewSelected }}</span>
+      <span class="app-toolbar__spacer"></span>
+      <span class="app-toolbar__calendar"> 9 de Marzo del 2025 
+        <mat-icon aria-hidden="false" fontIcon="event"></mat-icon>
+      </span>
     </div>
     <mat-divider class="app-drawer-divider"></mat-divider>
-    <div class="app-drawer-content">
-      <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
