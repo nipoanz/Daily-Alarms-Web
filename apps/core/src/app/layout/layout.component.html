@@ -1,1 +1,51 @@
-<router-outlet></router-outlet>
+<mat-toolbar class="app-toolbar">
+  <span class="app-toolbar__logo">
+    <img src="assets/logo.png" alt="logo" style="height: 50px" />
+  </span>
+  <span class="app-toolbar__spacer"></span>
+  <button mat-raised-button (click)="openDialog()" class="primary-button">
+    Cerrar Sesión
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="app-drawer">
+  <mat-drawer mode="side" opened class="app-drawer-menu">
+    <div class="app-drawer-menu__header">
+      <mat-form-field class="app-drawer-menu__form-field" >
+        <mat-label>Seleccione un Equipo</mat-label>
+        <mat-select  [(value)]="teamSelected" ngDefaultControl class="app-drawer-menu__select">
+          @for (option of optionsTeams; track option) {
+            <mat-option [value]="option" (click)="changeTeam($event, option)">
+              <div class="app-drawer-menu__option">
+                <mat-icon aria-hidden="false" fontIcon="{{option.icon}}"></mat-icon>
+                {{option.name}}
+              </div>
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <div class="app-drawer-menu__items">
+      @for (item of menuItems; track item) {
+        <mat-list-item class="app-drawer-menu__item"
+         [routerLink]="[item.route]" >
+          <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+          <div 
+            matListItemTitle
+            class="app-drawer-menu__title_item"
+            [ngClass]="{ 'active-item': isActive(item.route) }"
+          >{{item.title}}</div>
+        </mat-list-item>
+      }
+    </div>
+
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="app-drawer-content-bar">
+      <span>{{ teamSelected.name }} / {{ viewSelected }}</span>
+    </div>
+    <mat-divider class="app-drawer-divider"></mat-divider>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

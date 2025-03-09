@@ -1,0 +1,15 @@
+<h2 mat-dialog-title class="dialog-title">{{data.title}}</h2>
+<mat-dialog-content class="dialog-content-text">
+  <div class="dialog-content-message">
+    <p [ngClass]="{'dialog-content-message-two': data.input}"
+    >{{data.message}}</p>
+  </div>
+  <mat-form-field *ngIf="data.input" class="dialog-content-input">
+    <mat-label>Nombre del equipo</mat-label>
+    <input matInput [(ngModel)]="name" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions">
+  <button mat-raised-button class="secundary-button" (click)="onClose(false)"  *ngIf="data.cancelButton" >{{data.cancelLabel}}</button>
+  <button mat-raised-button class="primary-button" (click)="onClose(true)" [disabled]="data.disabledButton">{{data.acceptLabel}}</button>
+</mat-dialog-actions>

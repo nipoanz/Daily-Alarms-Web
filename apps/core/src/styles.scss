@@ -1,5 +1,73 @@
 @use '@angular/material' as mat;
+@use './component_theme-colors.scss' as colors;
 
+html {
+  color-scheme: light;
+  @include mat.theme(
+    (
+      color: colors.$primary-palette,
+      // typography: Poppins,
+      typography: (
+        plain-family: Poppins,
+        brand-family: Poppins,
+        bold-weight: 900,
+        medium-weight: 500,
+        regular-weight: 300,
+      ),
+      density: 0,
+    )
+  );
+}
+
+ 
+:root {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary),
+      container-text-color: var(--mat-sys-surface),
+    )
+  );
+
+  @include mat.dialog-overrides(
+    (
+      container-color: #fff,
+      subhead-color:  var(--mat-sys-secundary),
+      // container-text-color: var(--mat-sys-surface),
+    )
+  );
+  
+  @include mat.button-overrides((
+    text-ripple-color: var(--mat-sys-primary),
+    text-state-layer-color: var(--mat-sys-primary),
+    text-label-text-color: var(--mat-sys-primary),
+  ));
+  
+  @include mat.list-overrides((
+    list-item-container-color: #fff,
+  ));
+}
+
+
+:host ::ng-deep .mat-toolbar .mat-toolbar-single-row {
+  border-radius: 64px !important;
+  // min-width: 100px;
+}
+
+.secundary-button {
+  border: 3px solid #fff;
+  background-color: --mat-sys-secundary;
+  text-transform: uppercase;
+  color: var(--mat-sys-tertiary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.primary-button {
+  border: 3px solid #fff;
+  background-color: var(--mat-sys-primary);
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 * {
   font-size: 100%;

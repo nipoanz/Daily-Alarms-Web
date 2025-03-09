@@ -23,6 +23,11 @@ export const appRoutes: Route[] = [
         path: 'daily',
         loadChildren: () => import('dashboard/Routes').then((m) => m!.remoteRoutes),
       },
+      {
+        redirectTo: 'daily',
+        pathMatch: 'full',
+        path: '**',
+      }
     ]
   },
   {
