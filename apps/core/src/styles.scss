@@ -45,6 +45,28 @@ html {
   @include mat.list-overrides((
     list-item-container-color: #fff,
   ));
+
+  @include mat.slide-toggle-overrides((
+    track-outline-color: #9e9e9e,
+    selected-handle-color: #33658A,
+    selected-hover-handle-color: #33658A,
+    selected-hover-track-color: #def1ff,
+    selected-track-color: #def1ff,
+    selected-pressed-handle-color: #33658A,
+    selected-pressed-track-color: #def1ff,
+    unselected-handle-color: #fff,
+    unselected-hover-handle-color: #fff,
+    unselected-track-color: #9e9e9e,
+    unselected-hover-track-color: #9e9e9e,
+    selected-focus-track-color: #def1ff,
+    selected-focus-handle-color: #33658A,
+    unselected-focus-handle-color: #fff,
+    unselected-focus-track-color: #9e9e9e,
+    unselected-pressed-handle-color: #fff,
+    unselected-pressed-track-color: #9e9e9e,
+
+
+  ));
 }
 
 

@@ -1,0 +1,68 @@
+<div class="app-background">
+
+  <div class="settings__form-content">
+    <div class="settings__form-content-left">
+      <mat-form-field  class="dialog-content-input">
+        <mat-label>Nombre equipo:</mat-label>
+        <input matInput [(ngModel)]="team" />
+      </mat-form-field>
+      <mat-form-field  class="dialog-content-input">
+        <mat-label>Duración Proyecto:</mat-label>
+        <input matInput [(ngModel)]="duration" />
+      </mat-form-field>
+      <mat-form-field  class="dialog-content-input">
+        <mat-label>Hora Inicio:</mat-label>
+        <input matInput [(ngModel)]="dateBegin" />
+      </mat-form-field>
+      <mat-form-field  class="dialog-content-input">
+        <mat-label>Hora Fin:</mat-label>
+        <input matInput [(ngModel)]="dateEnd" />
+      </mat-form-field>
+    </div>
+    <div class="settings__form-content-right">
+      <mat-label>Días Habiles:</mat-label>
+      <div class="settings__form-content-days">
+        <mat-slide-toggle
+          class="settings__form-slide-toggle"
+          [checked]="monday"
+          [(ngModel)]="monday"> <p class="settings__form-slide-text">Lunes</p>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+          class="settings__form-slide-toggle"
+          [checked]="tuesday"
+          [(ngModel)]="tuesday"> <p class="settings__form-slide-text">Martes</p>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+          class="settings__form-slide-toggle"
+          [checked]="wednesday"
+          [(ngModel)]="wednesday"> <p class="settings__form-slide-text">Miercoles</p>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+          class="settings__form-slide-toggle"
+          [checked]="thursday"
+          [(ngModel)]="thursday"> <p class="settings__form-slide-text">Jueves</p>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+          class="settings__form-slide-toggle"
+          [checked]="friday"
+          [(ngModel)]="friday"> <p class="settings__form-slide-text">Viernes</p>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+          class="settings__form-slide-toggle"
+          [checked]="saturday"
+          [(ngModel)]="saturday"> <p class="settings__form-slide-text">Sabado</p>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+        
+          class="settings__form-slide-toggle"
+          [checked]="sunday"
+          [(ngModel)]="sunday"> <p class="settings__form-slide-text">Domingo</p>
+        </mat-slide-toggle>
+      </div>
+    
+    </div>
+  </div>
+  <div class="settings__action-content">
+    <button mat-raised-button class="primary-button" (click)="openDialog()">Guardar Cambios</button>
+  </div>
+</div>
